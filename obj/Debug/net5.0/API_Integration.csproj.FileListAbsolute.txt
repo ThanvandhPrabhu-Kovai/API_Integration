@@ -1,0 +1,16 @@
+D:\Projects\Kovai.Co\Internship\DotNet\Console\API_Integration\bin\Debug\net5.0\API_Integration.exe
+D:\Projects\Kovai.Co\Internship\DotNet\Console\API_Integration\bin\Debug\net5.0\API_Integration.deps.json
+D:\Projects\Kovai.Co\Internship\DotNet\Console\API_Integration\bin\Debug\net5.0\API_Integration.runtimeconfig.json
+D:\Projects\Kovai.Co\Internship\DotNet\Console\API_Integration\bin\Debug\net5.0\API_Integration.runtimeconfig.dev.json
+D:\Projects\Kovai.Co\Internship\DotNet\Console\API_Integration\bin\Debug\net5.0\API_Integration.dll
+D:\Projects\Kovai.Co\Internship\DotNet\Console\API_Integration\bin\Debug\net5.0\ref\API_Integration.dll
+D:\Projects\Kovai.Co\Internship\DotNet\Console\API_Integration\bin\Debug\net5.0\API_Integration.pdb
+D:\Projects\Kovai.Co\Internship\DotNet\Console\API_Integration\obj\Debug\net5.0\API_Integration.csproj.AssemblyReference.cache
+D:\Projects\Kovai.Co\Internship\DotNet\Console\API_Integration\obj\Debug\net5.0\API_Integration.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Kovai.Co\Internship\DotNet\Console\API_Integration\obj\Debug\net5.0\API_Integration.AssemblyInfoInputs.cache
+D:\Projects\Kovai.Co\Internship\DotNet\Console\API_Integration\obj\Debug\net5.0\API_Integration.AssemblyInfo.cs
+D:\Projects\Kovai.Co\Internship\DotNet\Console\API_Integration\obj\Debug\net5.0\API_Integration.csproj.CoreCompileInputs.cache
+D:\Projects\Kovai.Co\Internship\DotNet\Console\API_Integration\obj\Debug\net5.0\API_Integration.dll
+D:\Projects\Kovai.Co\Internship\DotNet\Console\API_Integration\obj\Debug\net5.0\ref\API_Integration.dll
+D:\Projects\Kovai.Co\Internship\DotNet\Console\API_Integration\obj\Debug\net5.0\API_Integration.pdb
+D:\Projects\Kovai.Co\Internship\DotNet\Console\API_Integration\obj\Debug\net5.0\API_Integration.genruntimeconfig.cache
