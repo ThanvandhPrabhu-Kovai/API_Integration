@@ -10,35 +10,36 @@ namespace API_Integration
     {
 
         private static readonly HttpClient client = new HttpClient();
+
         private static class Constants
         {
-            public static string unknown = "unknown";
+            public static readonly string unknown = "unknown";
 
-            public static string coordinates = "coord";
-            public static string coordLon = "lon";
-            public static string coordLat = "lat";
+            public static readonly string coordinates = "coord";
+            public static readonly string coordLon = "lon";
+            public static readonly string coordLat = "lat";
 
-            public static string weather = "weather";
-            public static string weatherCurrentStatus = "main";
-            public static string weatherDescription = "description";
+            public static readonly string weather = "weather";
+            public static readonly string weatherCurrentStatus = "main";
+            public static readonly string weatherDescription = "description";
 
-            public static string main = "main";
-            public static string mainAvgTemp = "temp";
-            public static string mainTempMin = "temp_min";
-            public static string mainTempMax = "temp_max";
-            public static string mainPressure = "pressure";
-            public static string mainHumidity = "humidity";
+            public static readonly string main = "main";
+            public static readonly string mainAvgTemp = "temp";
+            public static readonly string mainTempMin = "temp_min";
+            public static readonly string mainTempMax = "temp_max";
+            public static readonly string mainPressure = "pressure";
+            public static readonly string mainHumidity = "humidity";
 
-            public static string wind = "wind";
-            public static string windSpeed = "speed";
-            public static string windDeg = "deg";
+            public static readonly string wind = "wind";
+            public static readonly string windSpeed = "speed";
+            public static readonly string windDeg = "deg";
 
-            public static string sys = "sys";
-            public static string sysCountry = "country";
-            public static string sysSunRise = "sunrise";
-            public static string sysSunSet = "sunset";
+            public static readonly string sys = "sys";
+            public static readonly string sysCountry = "country";
+            public static readonly string sysSunRise = "sunrise";
+            public static readonly string sysSunSet = "sunset";
 
-            public static string name = "name";
+            public static readonly string name = "name";
 
         }
 
@@ -234,6 +235,7 @@ namespace API_Integration
             TimeSpan sunRise = TimeSpan.FromMilliseconds(Convert.ToInt32(sysDetails[Constants.sysSunRise].ToString()));
             TimeSpan sunSet = TimeSpan.FromMilliseconds(Convert.ToInt32(sysDetails[Constants.sysSunSet].ToString()));
             SysDetails sysObj = new SysDetails(country: country, sunRise: sunRise, sunSet: sunSet);
+            
             string name = jsonAsDictionary[Constants.name];
 
             Weather weather = new Weather(name: name, coordinate: coordinateObj, weatherDetailsVar: weatherDetailsObj, mainParams: mainParamsObj, wind: windObj, sys: sysObj);
