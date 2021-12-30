@@ -212,9 +212,9 @@ namespace API_Integration
             double lon = double.Parse(coord[Constants.coordLon].ToString());
             CoordinateDetails coordinateObj = new CoordinateDetails(lat, lon);
 
-            var weatherDetails = jsonAsDictionary[Constants.weather];
-            string currentWeather = weatherDetails[0][Constants.weatherCurrentStatus];
-            string desc = weatherDetails[0][Constants.weatherDescription];
+            var weatherDetails = jsonAsDictionary[Constants.weather][0];
+            string currentWeather = weatherDetails[Constants.weatherCurrentStatus];
+            string desc = weatherDetails[Constants.weatherDescription];
             WeatherDetails weatherDetailsObj = new WeatherDetails(currentWeather: currentWeather, desc: desc);
 
             var mainParams = jsonAsDictionary[Constants.main];
