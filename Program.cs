@@ -1,5 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Net.Http;
+using Newtonsoft.Json;
+using API_Integration;
+using System.Threading.Tasks;
 
 namespace API_Integration
 {
@@ -8,12 +12,14 @@ namespace API_Integration
         private static readonly HttpClient client = new HttpClient();
         static void Main(string[] args)
         {
-            getResults();
+            MainAsync().Wait();
             Console.ReadLine();
         }
 
-        static async void getResults() {
-            string result = await client.GetStringAsync("https://api.openweathermap.org/data/2.5/weather?q=Coimbatore&appid=5d6edcfd015c6df6d879f1bca2fc2344");
+        static async Task MainAsync()
+        {
+            Weather weather = await API_Integration.Weather.GetWeather();
+            string result = weather != null ? weather.ToString() : "";
             Console.Write(result);
         }
     }

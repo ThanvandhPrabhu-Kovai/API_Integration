@@ -14,3 +14,5 @@ D:\Projects\Kovai.Co\Internship\DotNet\Console\API_Integration\obj\Debug\net5.0\
 D:\Projects\Kovai.Co\Internship\DotNet\Console\API_Integration\obj\Debug\net5.0\ref\API_Integration.dll
 D:\Projects\Kovai.Co\Internship\DotNet\Console\API_Integration\obj\Debug\net5.0\API_Integration.pdb
 D:\Projects\Kovai.Co\Internship\DotNet\Console\API_Integration\obj\Debug\net5.0\API_Integration.genruntimeconfig.cache
+D:\Projects\Kovai.Co\Internship\DotNet\Console\API_Integration\bin\Debug\net5.0\Newtonsoft.Json.dll
+D:\Projects\Kovai.Co\Internship\DotNet\Console\API_Integration\obj\Debug\net5.0\API_Integration.csproj.CopyComplete
