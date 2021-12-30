@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Net.Http;
-using Newtonsoft.Json;
-using API_Integration;
 using System.Threading.Tasks;
 
 namespace API_Integration
