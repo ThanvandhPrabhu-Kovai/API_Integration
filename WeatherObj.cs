@@ -189,15 +189,23 @@ namespace API_Integration
             return result;
         }
 
-        public static async Task<Weather> GetWeather()
+        private static string generateLink()
         {
+            string link;
             Console.Write("\n\nPlease input a city name to get weather for : ");
             string cityName = Console.ReadLine();
             Console.Write("\n\n");
+            link = $"https://api.openweathermap.org/data/2.5/weather?q={cityName}&appid=5d6edcfd015c6df6d879f1bca2fc2344";
+            return link;
+        }
+
+        public static async Task<Weather> GetWeather()
+        {
+
             string result;
             try
             {
-                result = await client.GetStringAsync($"https://api.openweathermap.org/data/2.5/weather?q={cityName}&appid=5d6edcfd015c6df6d879f1bca2fc2344");
+                result = await client.GetStringAsync(generateLink());
             }
             catch
             {
@@ -235,7 +243,7 @@ namespace API_Integration
             TimeSpan sunRise = TimeSpan.FromMilliseconds(Convert.ToInt32(sysDetails[Constants.sysSunRise].ToString()));
             TimeSpan sunSet = TimeSpan.FromMilliseconds(Convert.ToInt32(sysDetails[Constants.sysSunSet].ToString()));
             SysDetails sysObj = new SysDetails(country: country, sunRise: sunRise, sunSet: sunSet);
-            
+
             string name = jsonAsDictionary[Constants.name];
 
             Weather weather = new Weather(name: name, coordinate: coordinateObj, weatherDetailsVar: weatherDetailsObj, mainParams: mainParamsObj, wind: windObj, sys: sysObj);
