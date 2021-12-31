@@ -146,6 +146,7 @@ namespace API_Integration
         }
 
         public string Name { get; set; }
+
         public CoordinateDetails Coordinates { get; set; }
 
         public WeatherDetails WeatherDetailsVar { get; set; }
@@ -184,7 +185,7 @@ namespace API_Integration
             string weatherDetailsStr = $"\n\nCurrentWeather: {WeatherDetailsVar.CurrentWeather}\n\nDescription: {WeatherDetailsVar.Desc}";
             string mainParamsStr = $"\n\nTemp:\n\n\tMin - {MainParamsDetails.MinTemp}\n\n\tMax - {MainParamsDetails.MaxTemp}\n\n\tAvg. - {MainParamsDetails.Temp}\n\nPressure: {MainParamsDetails.Pressure}\n\nHumidity: {MainParamsDetails.Humidity}";
             string windDetailsStr = $"\n\nWind:\n\n\tSpeed: {WindDetails.Speed}\n\n\tDegree: {WindDetails.Deg}";
-            string sysDetailsStr = $"\n\nCountry: {Sys.Country}";
+            string sysDetailsStr = $"\n\nCountry: {Sys.Country}\n\n";
             string result = nameStr + coordStr + weatherDetailsStr + mainParamsStr + windDetailsStr + sysDetailsStr;
             return result;
         }
