@@ -15,7 +15,7 @@ namespace API_Integration
 
         static async Task MainAsync()
         {
-            Weather weather = await API_Integration.Weather.GetWeather();
+            Weather weather = await Weather.GetWeather();
             string result = (weather != null) ? weather.ToString() : "";
             Console.Write(result);
         }
