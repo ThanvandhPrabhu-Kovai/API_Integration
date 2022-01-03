@@ -6,7 +6,6 @@ namespace API_Integration
 {
     class Program
     {
-        private static readonly HttpClient client = new HttpClient();
         static async Task Main(string[] args)
         {
             await GetCityNameFromUserAndShowWeather();
