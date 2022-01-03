@@ -180,7 +180,7 @@ namespace API_Integration
 
         public override string ToString()
         {
-            string nameStr = "\n\n" + Name;
+            string nameStr = "\n\nShowing weather for the city : " + Name;
             string coordStr = $"\n\nCoordinates:\n\n\tLatitude: {Coordinates.Latitude}\n\n\tLongitude: {Coordinates.Longitude}";
             string weatherDetailsStr = $"\n\nCurrentWeather: {WeatherDetailsVar.CurrentWeather}\n\nDescription: {WeatherDetailsVar.Desc}";
             string mainParamsStr = $"\n\nTemp:\n\n\tMin - {MainParamsDetails.MinTemp}\n\n\tMax - {MainParamsDetails.MaxTemp}\n\n\tAvg. - {MainParamsDetails.Temp}\n\nPressure: {MainParamsDetails.Pressure}\n\nHumidity: {MainParamsDetails.Humidity}";
@@ -190,23 +190,29 @@ namespace API_Integration
             return result;
         }
 
-        private static string generateLink()
+        public static string getCityName()
         {
-            string link;
             Console.Write("\n\nPlease input a city name to get weather for : ");
             string cityName = Console.ReadLine();
+            return cityName;
+        }
+
+        private static string generateLink(string cityName)
+        {
+            string link;
             Console.Write("\n\n");
             link = $"https://api.openweathermap.org/data/2.5/weather?q={cityName}&appid=5d6edcfd015c6df6d879f1bca2fc2344";
             return link;
         }
 
-        public static async Task<Weather> GetWeather()
+        public static async Task<Weather> GetWeather(string cityName)
         {
 
-            string result;
+            string response;
             try
             {
-                result = await client.GetStringAsync(generateLink());
+                string link = generateLink(cityName);
+                response = await client.GetStringAsync(link);
             }
             catch
             {
@@ -214,7 +220,7 @@ namespace API_Integration
                 return null;
             }
 
-            Dictionary<string, dynamic> jsonAsDictionary = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(result);
+            Dictionary<string, dynamic> jsonAsDictionary = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(response);
 
             var coord = jsonAsDictionary[Constants.coordinates];
             double lat = double.Parse(coord[Constants.coordLat].ToString());

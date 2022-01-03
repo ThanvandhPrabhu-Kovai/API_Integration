@@ -7,15 +7,16 @@ namespace API_Integration
     class Program
     {
         private static readonly HttpClient client = new HttpClient();
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-            MainAsync().Wait();
+            await GetCityNameFromUserAndShowWeather();
             Console.ReadLine();
         }
 
-        static async Task MainAsync()
+        static async Task GetCityNameFromUserAndShowWeather()
         {
-            Weather weather = await Weather.GetWeather();
+            string cityName = Weather.getCityName();
+            Weather weather = await Weather.GetWeather(cityName);
             string result = (weather != null) ? weather.ToString() : "";
             Console.Write(result);
         }
