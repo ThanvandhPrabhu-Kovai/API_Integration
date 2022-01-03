@@ -216,8 +216,8 @@ namespace API_Integration
             }
             catch
             {
-                Console.Write("Invalid city details detected, Please try again!");
-                return null;
+                Console.Write("Invalid city details detected, Please try again!\n\n");
+                throw new InvalidOperationException("City name invalid");
             }
 
             Dictionary<string, dynamic> jsonAsDictionary = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(response);
